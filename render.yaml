@@ -1,0 +1,13 @@
+# Render "Blueprint" -- lets you deploy the backend with one click via
+# https://render.com/docs/blueprint-spec by connecting this repo and
+# pointing Render at this file (New + > Blueprint).
+services:
+  - type: web
+    name: ps96-attendance-backend
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    envVars:
+      - key: PORT
+        value: 8000

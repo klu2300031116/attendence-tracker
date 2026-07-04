@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+:root {
+  /* -- Color tokens: "ledger" palette -- */
+  --ink: #1B2A4A;          /* primary text, headers */
+  --paper: #F5F3ED;        /* page background */
+  --card: #FFFFFF;         /* card surfaces */
+  --rule: #DAD5C7;         /* hairlines / dividers */
+  --graphite: #5B5F66;     /* secondary text */
+  --ledger-red: #B23A2E;   /* decline / attention accent */
+  --ledger-red-soft: #F3E2DF;
+  --teal: #3E7C74;         /* healthy / stable accent */
+  --teal-soft: #E4EEEC;
+  --gold: #B8862E;         /* tertiary accent, sparing use */
+
+  /* -- Type -- */
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Courier New', monospace;
+
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a { color: inherit; }
+
+::selection {
+  background: var(--ledger-red);
+  color: var(--paper);
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid var(--ledger-red);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
